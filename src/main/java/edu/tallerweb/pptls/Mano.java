@@ -1,27 +1,24 @@
 package edu.tallerweb.pptls;
 
-/**
- * Representa una de las Manos involucradas en el juego
- */
+
 public class Mano {
 
-	/**
-	 * Toda Mano debe crearse con una forma dada, que será
-	 * la que determine su condición en el juego.
-	 * @param forma, la Forma que adopta la Mano.
-	 */
+	int valorForma;
 	public Mano(final Forma forma) {
-		throw new RuntimeException("No implementado aún");
+		this.valorForma = forma.getValor();
 	}
 
-	/**
-	 * Evaluará el resultado de la partida según las reglas
-	 * del juego.
-	 * @param otra, la otra Mano.
-	 * @return un Resultado, de acuerdo al estado del juego.
-	 */
+	
 	public Resultado jugarCon(final Mano otra) {
-		throw new RuntimeException("No implementado aún");
+int resultado = (5 + this.valorForma- otra.valorForma) % 5;
+		
+		if (resultado == 1 || resultado == 3){
+			return Resultado.GANA;
+		}else if (resultado == 2 || resultado == 4){
+			return Resultado.PIERDE;
+		}else { 
+			return Resultado.EMPATA;
 	}
 
+	}
 }
