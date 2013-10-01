@@ -5,7 +5,7 @@ package edu.tallerweb.pptls;
  */
 public enum Forma {
 
-	PIEDRA(0),  PAPEL(1), TIJERA(2), LAGARTO(3), SPOCK(4);
+	PIEDRA(0),  PAPEL(1), TIJERA(2), SPOCK(3), LAGARTO(4);
 
 	private final Integer valor;
 
